@@ -97,17 +97,9 @@ public class TicTacToe {
         win = checkFields(6, 7, 8) || win;
         win = checkFields(0, 3, 6) || win;
         win = checkFields(1, 4, 7) || win;
-
-
-        if (checkFields(2, 5, 8)) {
-            win = true;
-        }
-        if (checkFields(0, 4, 8)) {
-            win = true;
-        }
-        if (checkFields(2, 4, 6)) {
-            win = true;
-        }
+        win = checkFields(2, 5, 8) || win;
+        win = checkFields(0, 4, 8) || win;
+        win = checkFields(2, 4, 6) || win;
 
         return win;
     }
